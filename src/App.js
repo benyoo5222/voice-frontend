@@ -116,6 +116,7 @@ function App() {
       <Container fluid className="container">
         <Row xs={1} sm={1} md={3} lg={3} xl={3} className="removeMargin">
             <Col xs={0} sm={0} md={2} lg={1} xl={3}>
+              <Footer userInfo={user} />
             </Col>
 
             <Col xs sm md={9} lg={7} xl={6} className="main-content">
@@ -126,8 +127,6 @@ function App() {
                   <HomeTimeLine homeTimeLineTweets={homeTimeLineTweets} />
                 </Route>
               </Switch>
-              
-              <Footer userInfo={user} />
             </Col>
 
             <Col xs={0} sm={0} md={1} lg={4} xl={3}>

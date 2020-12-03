@@ -1,11 +1,99 @@
-@media (min-width: 1200px) { 
+@media (min-width: 1400px) { 
+    .footer-container {
+        position: sticky;
+        height: 621px;
+        background-color: white;
+        top: 1em;
+        width: 255px;
+        float: right;
+
+        .compose-button-container {
+
+            .compose-button {
+               display: none;
+            }
+
+            .large-compose-button {
+                display: flex;
+                align-items: center;
+                max-width: 230px;
+                height: 49px;
+                background-color: rgb(29, 161, 242);
+                box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 8px, rgba(101, 119, 134, 0.25) 0px 1px 3px 1px;
+                border-color: rgb(255, 255, 255);
+                border-width: 0px;
+                border-style: solid;
+                border-radius: 9999px;
+                text-align: center;
+
+                .large-compose-button-text {
+                    color: white;
+                    width: 100%;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    font-weight: 700;
+                    font-size: 15px;
+                }
+            }
+        }
+    
+        .icons-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 90%;
+
+            .footer-twitter-container {
+                width: 35px;
+                height: 35px;
+            }
+
+            .footer-icon-container {
+                display: flex;
+                align-items: center;
+
+                .footer-icon-sizing {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .footer-icon-text {
+                    font-size: 19px;
+                    font-weight: 700;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    overflow-wrap: break-word;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    margin-left: 15px;
+                }
+            }
+            
+        }
+
+        .footer-search-icon {
+            display: none !important;   
+        }
+
+        .footer-profile {
+            position: fixed;
+            bottom: 1em;
+
+            .footer-pic {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) { 
     .footer-container {
         position: fixed;
         height: 100%;
         background-color: white;
         top: 1em;
-        left: 4%;
+        left: 3.5%;
         min-width: 21%;
+        z-index: 2;
 
         .compose-button-container {
 
@@ -93,6 +181,7 @@
         background-color: white;
         top: 0px;
         left: 0.6em;
+        z-index: 2;
 
         .compose-button-container {
 
@@ -174,6 +263,7 @@
         background-color: white;
         top: 0px;
         left: 0.1em;
+        z-index: 2;
 
         .compose-button-container {
 
@@ -253,6 +343,7 @@
         background-color: rgba(255,255,255,1.00);
         top: 0px;
         left: 1.5em;
+        z-index: 2;
 
         .compose-button-container {
             .large-compose-button {
@@ -331,6 +422,7 @@
         border: 0 solid black;
         border-top-width: 1px;
         border-top-color: rgb(230, 236, 240);
+        z-index: 2;
         
         .compose-button-container {
             position: fixed;
