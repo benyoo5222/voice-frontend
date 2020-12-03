@@ -1,0 +1,389 @@
+@media (min-width: 1200px) { 
+    .footer-container {
+        position: fixed;
+        height: 100%;
+        background-color: white;
+        top: 1em;
+        left: 4%;
+        min-width: 21%;
+
+        .compose-button-container {
+
+            .compose-button {
+               display: none;
+            }
+
+            .large-compose-button {
+                display: flex;
+                align-items: center;
+                max-width: 230px;
+                height: 49px;
+                background-color: rgb(29, 161, 242);
+                box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 8px, rgba(101, 119, 134, 0.25) 0px 1px 3px 1px;
+                border-color: rgb(255, 255, 255);
+                border-width: 0px;
+                border-style: solid;
+                border-radius: 9999px;
+                text-align: center;
+
+                .large-compose-button-text {
+                    color: white;
+                    width: 100%;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    font-weight: 700;
+                    font-size: 15px;
+                }
+            }
+        }
+    
+        .icons-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 40%;
+
+            .footer-twitter-container {
+                width: 35px;
+                height: 35px;
+            }
+
+            .footer-icon-container {
+                display: flex;
+                align-items: center;
+
+                .footer-icon-sizing {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .footer-icon-text {
+                    font-size: 19px;
+                    font-weight: 700;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    overflow-wrap: break-word;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    margin-left: 15px;
+                }
+            }
+            
+        }
+
+        .footer-search-icon {
+            display: none !important;   
+        }
+
+        .footer-profile {
+            position: fixed;
+            bottom: 1em;
+
+            .footer-pic {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1101px) and (max-width: 1199px) { 
+    .footer-container {
+        padding: 13px 1em 25px 1em;
+        position: fixed;
+        height: 100%;
+        background-color: white;
+        top: 0px;
+        left: 0.6em;
+
+        .compose-button-container {
+
+            .large-compose-button {
+                display: none;
+            }
+
+            .compose-button {
+                width: 49px;
+                height: 49px;
+                background-color: rgb(29, 161, 242);
+                box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 8px, rgba(101, 119, 134, 0.25) 0px 1px 3px 1px;
+                border-color: rgb(255, 255, 255);
+                border-width: 0px;
+                border-style: solid;
+                border-radius: 9999px;
+                text-align: center;
+    
+                .compose-icon {
+                    fill: rgb(255, 255, 255);
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin-top: 0.8em;
+                }
+            }
+        }
+    
+        .icons-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 60%;
+            align-items: center;
+
+            .footer-twitter-container {
+                width: 32px;
+                height: 32px;
+            }
+
+            .footer-icon-container {
+
+                .footer-icon-sizing {
+                    width: 30px;
+                    height: 30px;
+                    
+                    .footer-icon {
+                        fill: rgb(101, 119, 134);
+                    }
+                }
+
+                .footer-icon-text {
+                    display: none;
+                }
+            }
+            
+        }
+
+        .footer-search-icon {
+            display: none;   
+        }
+
+        .footer-profile {
+            position: fixed;
+            bottom: 1em;
+
+            .footer-pic {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1100px) { 
+    .footer-container {
+        padding: 13px 1em 25px 1em;
+        position: fixed;
+        height: 100%;
+        background-color: white;
+        top: 0px;
+        left: 0.1em;
+
+        .compose-button-container {
+
+            .large-compose-button {
+                display: none;
+            }
+
+            .compose-button {
+                width: 49px;
+                height: 49px;
+                background-color: rgb(29, 161, 242);
+                box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 8px, rgba(101, 119, 134, 0.25) 0px 1px 3px 1px;
+                border-color: rgb(255, 255, 255);
+                border-width: 0px;
+                border-style: solid;
+                border-radius: 9999px;
+                text-align: center;
+    
+                .compose-icon {
+                    fill: rgb(255, 255, 255);
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin-top: 0.8em;
+                }
+            }
+        }
+    
+        .icons-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 60%;
+            align-items: center;
+
+            .footer-twitter-container {
+                width: 32px;
+                height: 32px;
+            }
+
+            .footer-icon-container {
+
+                .footer-icon-sizing {
+                    width: 26px;
+                    height: 26px;
+                    
+                    .footer-icon {
+                        fill: rgb(101, 119, 134);
+                    }
+                }
+
+                .footer-icon-text {
+                    display: none;
+                }
+            }
+        }
+        
+        .footer-search-icon {
+            display: none;   
+        }
+
+        .footer-profile {
+            position: fixed;
+            bottom: 1em;
+
+            .footer-pic {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+    .footer-container {
+        padding: 13px 1em 25px 2em;
+        position: fixed;
+        height: 100%;
+        background-color: rgba(255,255,255,1.00);
+        top: 0px;
+        left: 1.5em;
+
+        .compose-button-container {
+            .large-compose-button {
+                display: none;
+            }
+
+            .compose-button {
+                width: 49px;
+                height: 49px;
+                background-color: rgb(29, 161, 242);
+                box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 8px, rgba(101, 119, 134, 0.25) 0px 1px 3px 1px;
+                border-color: rgb(255, 255, 255);
+                border-width: 0px;
+                border-style: solid;
+                border-radius: 9999px;
+                text-align: center;
+    
+                .compose-icon {
+                    fill: rgb(255, 255, 255);
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin-top: 0.8em;
+                }
+            }
+        }
+    
+        .icons-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 60%;
+            align-items: center;
+            
+            .footer-twitter-container {
+                width: 32px;
+                height: 32px;
+            }
+
+            .footer-icon-container {
+
+                .footer-icon-sizing {
+                    width: 26px;
+                    height: 26px;
+                    
+                    .footer-icon {
+                        fill: rgb(101, 119, 134);
+                    }
+                }
+
+                .footer-icon-text {
+                    display: none;
+                }
+            }
+        }
+
+        .footer-profile {
+            position: fixed;
+            bottom: 1em;
+
+            .footer-pic {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-container {
+        padding: 13px 2em 25px 2em;
+        position: fixed;
+        height: 50px;
+        background-color: rgba(255,255,255,1.00);
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        border: 0 solid black;
+        border-top-width: 1px;
+        border-top-color: rgb(230, 236, 240);
+        
+        .compose-button-container {
+            position: fixed;
+            bottom: 68px;
+            right: 1em;
+
+            .large-compose-button {
+                display: none;
+            }
+    
+            .compose-button {
+                width: 55px;
+                height: 55px;
+                background-color: rgb(29, 161, 242);
+                box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 8px, rgba(101, 119, 134, 0.25) 0px 1px 3px 1px;
+                border-color: rgb(255, 255, 255);
+                border-width: 0px;
+                border-style: solid;
+                border-radius: 9999px;
+                text-align: center;
+    
+                .compose-icon {
+                    fill: rgb(255, 255, 255);
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin-top: 0.8em;
+                }
+            }
+        }
+    
+        .icons-container {
+            display: flex;
+            justify-content: space-between;
+
+            .footer-twitter-icon-container {
+                display: none;
+            }
+    
+            .footer-icon-container {
+
+                .footer-icon-sizing {
+                    width: 26px;
+                    height: 26px;
+                    
+                    .footer-icon {
+                        fill: rgb(101, 119, 134);
+                    }
+                }
+
+                .footer-icon-text {
+                    display: none;
+                }
+            }
+        }
+    }
+}

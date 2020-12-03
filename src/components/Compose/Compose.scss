@@ -1,0 +1,50 @@
+@media (min-width: 768px) { 
+    .compose-button-container {
+
+        .compose-button {
+            width: 55px;
+            height: 55px;
+            background-color: rgb(29, 161, 242);
+            box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 8px, rgba(101, 119, 134, 0.25) 0px 1px 3px 1px;
+            border-color: rgb(255, 255, 255);
+            border-width: 0px;
+            border-style: solid;
+            border-radius: 9999px;
+            text-align: center;
+
+            .compose-icon {
+                fill: rgb(255, 255, 255);
+                width: 1.5em;
+                height: 1.5em;
+                margin-top: 0.8em;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .compose-button-container {
+        position: fixed;
+        bottom: 68px;
+        right: 1em;
+
+        .compose-button {
+            width: 55px;
+            height: 55px;
+            background-color: rgb(29, 161, 242);
+            box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 8px, rgba(101, 119, 134, 0.25) 0px 1px 3px 1px;
+            border-color: rgb(255, 255, 255);
+            border-width: 0px;
+            border-style: solid;
+            border-radius: 9999px;
+            text-align: center;
+
+            .compose-icon {
+                fill: rgb(255, 255, 255);
+                width: 1.5em;
+                height: 1.5em;
+                margin-top: 0.8em;
+            }
+        }
+    }
+}

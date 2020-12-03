@@ -1,0 +1,61 @@
+@import "~bootstrap/scss/bootstrap";
+
+@media (min-width: 768px) { 
+    .bottom-spacing {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) { 
+    .bottom-spacing {
+        margin-bottom: 3rem;
+    }
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+
+    .main-content {
+        padding: 0;
+    }
+}
+
+.image-container {
+
+    .profile-picture {
+        border-radius: 9999px;
+        width: 60%;
+    }
+}
+
+
+
+.removeMargin {
+    margin: 0;
+}
+
+.border-style {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #e6ecf0;
+    border-left: 1px solid rgb(230, 236, 240);
+    border-right: 1px solid rgb(230, 236, 240);
+}
+
+.pic-border {
+    border: 1px solid #f6f6f6;
+}
+
+.content-profile-name-font {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+}
+
+.twitter-logo {
+ 
+    .main-color {
+        fill: rgba(29,161,242,1.00);
+    }
+}

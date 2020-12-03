@@ -1,0 +1,359 @@
+@media (min-width: 1300px) { 
+    .sideMenu-container {
+        width: 290px;
+        position: sticky;
+        top: 0px;
+
+        .sideMenu-searchBar-container {
+            width: 290px;
+            height: 53px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .sideMenu-searchBar {
+                height: 40px;
+                background-color: #ebeef0;
+                display: flex;
+                align-items: center;
+                border-radius: 9999px 0 0 9999px;
+            
+                .sideMenu-searchIcon {
+                    display: flex;
+                    padding-left: 5px;
+            
+                    .sideMenu-search-icon {
+                        width: 40px;
+                        height: 18px;
+                        fill: rgb(101, 119, 134);
+                    }
+                }
+            }
+
+            .sideMenu-searchBar-textArea-container {
+                border-top-right-radius: 9999px;
+                border-bottom-right-radius: 9999px;
+                height: 40px;
+                display: flex;
+                background-color: #ebeef0;
+                flex: 1;
+                font-size: 15px;
+                font-weight: 400;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                overflow-wrap: break-word;
+
+                .sideMenu-searchBar-textArea {
+                    border: 0;
+                    background-color: #ebeef0;
+                    width: 90%;
+                    padding: 10px;
+                }
+            }
+        }
+
+        .sideMenu-userTrending {
+            background-color: rgb(247, 249, 250);
+            border-color: rgb(247, 249, 250);
+            border-radius: 16px;
+            border-width: 1px;
+            border-style: solid;
+
+            .sideMenu-userTrending-title {
+                border-bottom-color: rgb(235, 238, 240);
+                border-bottom-width: 1px;
+                display: flex;
+                border-style: 1px;
+                border-bottom-style: solid;
+                padding: 10px 15px;
+                font-weight: 800;
+                font-size: 19px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            }
+
+            .sideMenu-userTrending-items-container {
+                padding: 10px 15px;
+                border-bottom-width: 1px;
+                border-bottom-color: rgb(235, 238, 240);
+                border-bottom-style: solid;
+
+                .sideMenu-userTrending-description {
+                    font-weight: 700;
+                    font-size: 15px;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    padding-top: 2px;
+                }
+
+                .sideMenu-userTrending-promoted {
+                
+                    .sideMenu-promoted-icon {
+                        height: 1em;
+                        fill: rgb(91, 112, 131);
+                        margin-right: 5px;
+                    }
+
+                    .sideMenu-promoted-text {
+                        font-size: 13px;
+                        color: rgb(91, 112, 131);
+                        font-weight: 400;
+                    }
+                }
+
+                .sideMenu-userTrending-tweetNumbers {
+                    font-weight: 400;
+                    color: rgb(91, 112, 131);
+                    font-size: 13px;
+                    margin-top: 5px;
+                }
+            }
+
+            .sideMenu-userTrending-more-items {
+                padding: 10px 15px;
+                outline-style: none;
+                color: rgba(29,161,242,1.00);
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) { 
+    .sideMenu-container {
+        width: 260px;
+        position: sticky;
+        top: 0px;
+
+        .sideMenu-searchBar-container {
+            width: 260px;
+            height: 53px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .sideMenu-searchBar {
+                height: 40px;
+                background-color: #ebeef0;
+                display: flex;
+                align-items: center;
+                border-radius: 9999px 0 0 9999px;
+            
+                .sideMenu-searchIcon {
+                    display: flex;
+                    padding-left: 5px;
+            
+                    .sideMenu-search-icon {
+                        width: 40px;
+                        height: 18px;
+                        fill: rgb(101, 119, 134);
+                    }
+                }
+            }
+
+            .sideMenu-searchBar-textArea-container {
+                border-top-right-radius: 9999px;
+                border-bottom-right-radius: 9999px;
+                height: 40px;
+                display: flex;
+                background-color: #ebeef0;
+                flex: 1;
+                font-size: 15px;
+                font-weight: 400;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                overflow-wrap: break-word;
+
+                .sideMenu-searchBar-textArea {
+                    border: 0;
+                    background-color: #ebeef0;
+                    width: 90%;
+                    padding: 10px;
+                }
+            }
+        }
+
+        .sideMenu-userTrending {
+            background-color: rgb(247, 249, 250);
+            border-color: rgb(247, 249, 250);
+            border-radius: 16px;
+            border-width: 1px;
+            border-style: solid;
+
+            .sideMenu-userTrending-title {
+                border-bottom-color: rgb(235, 238, 240);
+                border-bottom-width: 1px;
+                display: flex;
+                border-style: 1px;
+                border-bottom-style: solid;
+                padding: 10px 15px;
+                font-weight: 800;
+                font-size: 19px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            }
+
+            .sideMenu-userTrending-items-container {
+                padding: 10px 15px;
+                border-bottom-width: 1px;
+                border-bottom-color: rgb(235, 238, 240);
+                border-bottom-style: solid;
+
+                .sideMenu-userTrending-description {
+                    font-weight: 700;
+                    font-size: 15px;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    padding-top: 2px;
+                }
+
+                .sideMenu-userTrending-promoted {
+                
+                    .sideMenu-promoted-icon {
+                        height: 1em;
+                        fill: rgb(91, 112, 131);
+                        margin-right: 5px;
+                    }
+
+                    .sideMenu-promoted-text {
+                        font-size: 13px;
+                        color: rgb(91, 112, 131);
+                        font-weight: 400;
+                    }
+                }
+
+                .sideMenu-userTrending-tweetNumbers {
+                    font-weight: 400;
+                    color: rgb(91, 112, 131);
+                    font-size: 13px;
+                    margin-top: 5px;
+                }
+            }
+
+            .sideMenu-userTrending-more-items {
+                padding: 10px 15px;
+                outline-style: none;
+                color: rgba(29,161,242,1.00);
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+    .sideMenu-container {
+        width: 270px;
+        position: sticky;
+        top: 0px;
+
+        .sideMenu-searchBar-container {
+            width: 270px;
+            height: 53px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .sideMenu-searchBar {
+                height: 40px;
+                background-color: #ebeef0;
+                display: flex;
+                align-items: center;
+                border-radius: 9999px 0 0 9999px;
+            
+                .sideMenu-searchIcon {
+                    display: flex;
+                    padding-left: 5px;
+            
+                    .sideMenu-search-icon {
+                        width: 40px;
+                        height: 18px;
+                        fill: rgb(101, 119, 134);
+                    }
+                }
+            }
+
+            .sideMenu-searchBar-textArea-container {
+                border-top-right-radius: 9999px;
+                border-bottom-right-radius: 9999px;
+                height: 40px;
+                display: flex;
+                background-color: #ebeef0;
+                flex: 1;
+                font-size: 15px;
+                font-weight: 400;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                overflow-wrap: break-word;
+
+                .sideMenu-searchBar-textArea {
+                    border: 0;
+                    background-color: #ebeef0;
+                    width: 90%;
+                    padding: 10px;
+                }
+            }
+        }
+
+        .sideMenu-userTrending {
+            background-color: rgb(247, 249, 250);
+            border-color: rgb(247, 249, 250);
+            border-radius: 16px;
+            border-width: 1px;
+            border-style: solid;
+
+            .sideMenu-userTrending-title {
+                border-bottom-color: rgb(235, 238, 240);
+                border-bottom-width: 1px;
+                display: flex;
+                border-style: 1px;
+                border-bottom-style: solid;
+                padding: 10px 15px;
+                font-weight: 800;
+                font-size: 19px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            }
+
+            .sideMenu-userTrending-items-container {
+                padding: 10px 15px;
+                border-bottom-width: 1px;
+                border-bottom-color: rgb(235, 238, 240);
+                border-bottom-style: solid;
+
+                .sideMenu-userTrending-description {
+                    font-weight: 700;
+                    font-size: 15px;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    padding-top: 2px;
+                }
+
+                .sideMenu-userTrending-promoted {
+                
+                    .sideMenu-promoted-icon {
+                        height: 1em;
+                        fill: rgb(91, 112, 131);
+                        margin-right: 5px;
+                    }
+
+                    .sideMenu-promoted-text {
+                        font-size: 13px;
+                        color: rgb(91, 112, 131);
+                        font-weight: 400;
+                    }
+                }
+
+                .sideMenu-userTrending-tweetNumbers {
+                    font-weight: 400;
+                    color: rgb(91, 112, 131);
+                    font-size: 13px;
+                    margin-top: 5px;
+                }
+            }
+
+            .sideMenu-userTrending-more-items {
+                padding: 10px 15px;
+                outline-style: none;
+                color: rgba(29,161,242,1.00);
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .sideMenu-container {
+        display: none;
+    }
+}
