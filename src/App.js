@@ -111,7 +111,7 @@ function App() {
     userTrendingData
   } = useUserTrending();
 
-  const modalState = true;
+  const modalState = false;
   //handleListen();
 
   const preventScroll = () => {

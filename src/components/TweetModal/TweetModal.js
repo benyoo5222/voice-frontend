@@ -17,7 +17,7 @@ function TweetModal({modalState, user}) {
                     user && modalState
                         ?   <div className="tweet-modal-container">   
                                 <div className="tweet-modal-content">
-                                    <div className="navigation-bar main-content-spacing border-style">
+                                    <div className="navigation-bar main-content-spacing tweet-modal-nav-style">
                                         <div className="back-button">
                                             <svg viewBox="0 0 24 24" className="back-button-sizing">
                                                 <g>
