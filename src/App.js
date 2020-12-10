@@ -16,6 +16,7 @@ import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import HomeTimeLine from './components/Home/Home';
 import SideMenu from './components/SideMenu/SideMenu';
+import TweetModal from './components/TweetModal/TweetModal';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -110,29 +111,41 @@ function App() {
     userTrendingData
   } = useUserTrending();
 
+  const modalState = true;
   //handleListen();
+
+  const preventScroll = () => {
+    if (modalState) document.body.style.overflow = "hidden";
+  };
+
+  preventScroll();
   return (
     <Router>
       <Container fluid className="container">
         <Row xs={1} sm={1} md={3} lg={3} xl={3} className="removeMargin">
-            <Col xs={0} sm={0} md={2} lg={1} xl={3}>
-              <Footer userInfo={user} />
-            </Col>
+          <Col xs={0} sm={0} md={2} lg={1} xl={3}>
+            <Footer userInfo={user} />
+          </Col>
 
-            <Col xs sm md={9} lg={7} xl={6} className="main-content">
-              <Navigation userInfo={user} isAuthenticated={isAuthenticated} />
+          <Col xs sm md={9} lg={7} xl={6} className="main-content">
+            <Navigation 
+              userInfo={user} 
+              isAuthenticated={isAuthenticated}
+            />
 
-              <Switch>
-                <Route path="/">
-                  <HomeTimeLine homeTimeLineTweets={homeTimeLineTweets} />
-                </Route>
-              </Switch>
-            </Col>
+            <Switch>
+              <Route path="/">
+                <HomeTimeLine homeTimeLineTweets={homeTimeLineTweets} />
+              </Route>
+            </Switch>
+          </Col>
 
-            <Col xs={0} sm={0} md={1} lg={4} xl={3}>
-              <SideMenu userTrendingData={userTrendingData} />
-            </Col>
-          </Row>
+          <Col xs={0} sm={0} md={1} lg={4} xl={3}>
+            <SideMenu userTrendingData={userTrendingData} />
+          </Col>
+        </Row>
+
+        <TweetModal user={user} modalState={modalState}/>
       </Container>
   </Router>
   );
