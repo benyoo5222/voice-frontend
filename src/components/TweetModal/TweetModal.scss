@@ -172,6 +172,10 @@
         left: 0;
         background-color: white;
 
+        .tweet-modal-content {
+            height: 100%;
+        }
+
         .back-button {
             height: 100%;
             display: flex;

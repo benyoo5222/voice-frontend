@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {
@@ -8,10 +8,12 @@ import {
   Link,
   useRouteMatch,
   useParams,
+  useHistory,
 } from "react-router-dom";
 import useUserInfoAuth from './hooks/useUserInfoAuth';
 import useHomeTimeLineTweets from './hooks/useHomeTimeLineTweets';
 import useUserTrending from './hooks/useUserTrending';
+import useTweetModalState from './hooks/useTweetModalState';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import HomeTimeLine from './components/Home/Home';
@@ -95,6 +97,8 @@ const handleListen = () => {
 };
 
 function App() {
+  const history = useHistory();
+
   const {
     isAuthenticated,
     setAuthenticationStatus,
@@ -111,7 +115,11 @@ function App() {
     userTrendingData
   } = useUserTrending();
 
-  const modalState = false;
+  const {
+    modalState,
+    updateModalState,
+  } = useTweetModalState();
+
   //handleListen();
 
   const preventScroll = () => {
@@ -124,7 +132,7 @@ function App() {
       <Container fluid className="container">
         <Row xs={1} sm={1} md={3} lg={3} xl={3} className="removeMargin">
           <Col xs={0} sm={0} md={2} lg={1} xl={3}>
-            <Footer userInfo={user} />
+            <Footer userInfo={user} updateModalState={updateModalState} />
           </Col>
 
           <Col xs sm md={9} lg={7} xl={6} className="main-content">
@@ -145,7 +153,7 @@ function App() {
           </Col>
         </Row>
 
-        <TweetModal user={user} modalState={modalState}/>
+        <TweetModal user={user} modalState={modalState} updateModalState={updateModalState} />
       </Container>
   </Router>
   );
