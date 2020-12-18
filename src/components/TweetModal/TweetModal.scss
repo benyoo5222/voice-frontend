@@ -1,3 +1,38 @@
+.media-left-container {
+    margin-right: 10px;
+}
+
+.tweet-compose-mediaSection-container {
+    display: flex;
+    max-height: 270px;
+
+    .media-right-container, .media-left-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1;
+
+        .tweet-compose-media-1, .tweet-compose-media-2, .tweet-compose-media-3, .tweet-compose-media-4 {
+            flex: 1 1;
+            overflow-y: hidden;
+            border-radius: 16px;
+            border-color: rgba(0, 0, 0, 0);
+        }
+
+        .tweet-compose-media-1, .tweet-compose-media-2 {
+            margin-bottom: 5px;
+        }
+
+        .tweet-compose-media-3, .tweet-compose-media-4 {
+            margin-top: 5px;
+        }
+
+        img.tweet-compose-selected-media {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
 @media (min-width: 703px) {
     .tweet-modal-container {
         position: fixed;
@@ -100,7 +135,7 @@
                         color: #5B7083;
                         font-weight: 400;
                     }
-    
+
                     .tweet-compose-public-settings-container {
                         display: block;
                         padding-bottom: 10px;

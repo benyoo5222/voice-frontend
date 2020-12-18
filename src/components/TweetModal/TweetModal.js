@@ -6,12 +6,83 @@ import {
     useRouteMatch,
     useParams,
     useHistory,
-  } from "react-router-dom";
-  import './TweetModal.scss';
+} from "react-router-dom";
+import useMediaFile from "../../hooks/useMediaFile";
+import './TweetModal.scss';
 
 function TweetModal({ modalState, user, updateModalState }) {
     const fileExplorer = useRef();
     const history = useHistory();
+
+    const {
+        selectedFiles,
+        updateSelectedFiles
+    } = useMediaFile();
+
+    const TEMPENUMS = {
+        ADDMEDIA: "Add Media",
+        MEDIACONTINERS: {
+            LEFT: "left",
+            RIGHT: "right",
+        }
+    };
+
+    const mediaSelections = () => {
+        const mediaElements = {
+            left: [],
+            right: [],
+        };
+
+        if (selectedFiles.length > 0) {
+            selectedFiles.forEach((fileInfo, index) => {
+                const MediaTag = <div key={index} className={`tweet-compose-media-${index + 1}`}>
+                    <img src={URL.createObjectURL(fileInfo)} className="tweet-compose-selected-media"/>
+                </div>;
+
+                switch (index + 1) {
+                    case 1:
+                    case 4:
+                        mediaElements.left = [
+                            ...mediaElements.left,
+                            MediaTag,
+                        ];
+                        return;
+                    case 2: 
+                    case 3:
+                        mediaElements.right = [
+                            ...mediaElements.right, 
+                            MediaTag,
+                        ];
+                        return;
+                    default:
+                        console.log('Error');
+                        return;
+                }
+            });
+        }
+
+        return mediaElements;
+    };
+
+    const MediaSelectionsContainers = () => {
+        const components = [];
+
+        const mediaSelectedElements = mediaSelections();
+
+        if (mediaSelectedElements.left || mediaSelectedElements.right) {
+            [TEMPENUMS.MEDIACONTINERS.LEFT, TEMPENUMS.MEDIACONTINERS.RIGHT].forEach((direction) => {
+                if (mediaSelectedElements[direction].length > 0) {
+                    components.push(
+                        <div key={`media-${direction}-container`} className={`media-${direction}-container`}>
+                            {mediaSelectedElements[direction]}
+                        </div>
+                    );
+                }
+            });
+        }
+            
+        return components;
+    };
 
     useEffect(() => {
         if (modalState) {
@@ -21,14 +92,11 @@ function TweetModal({ modalState, user, updateModalState }) {
         }
       }, [modalState]);
 
-    const TEMPENUMS = {
-        ADDMEDIA: "Add Media"
-    };
-
     const closeModal = (e) => {
         const divTarget = e.target;
 
         if (divTarget.className === "tweet-modal-container" ) { // Need to create ENUMS
+            updateSelectedFiles([]);
             updateModalState(false);   
             document.body.style.overflow = "scroll";
             history.goBack();
@@ -38,6 +106,7 @@ function TweetModal({ modalState, user, updateModalState }) {
     const backButtonEvent = (e) => {
         e.preventDefault();
 
+        updateSelectedFiles([]);
         updateModalState(false);
         document.body.style.overflow = "scroll";
         history.goBack();
@@ -50,8 +119,6 @@ function TweetModal({ modalState, user, updateModalState }) {
         switch (attributeName) {
             case TEMPENUMS.ADDMEDIA:
                 console.log("Success");
-
-                console.log("file", fileExplorer.current);
                 fileExplorer.current.click();
                 return;
             default:
@@ -61,7 +128,16 @@ function TweetModal({ modalState, user, updateModalState }) {
     };
 
     const handleUpload = (e) => {
-        console.log("event upload", e);
+        const { files } = e.target;
+        console.log("files", files);
+
+        if (files && files.length > 0) {
+            updateSelectedFiles((prev) => {
+                const copiedArray = [...prev, files[0]];
+
+                return copiedArray;
+            });
+        }
     };
 
     return (
@@ -102,6 +178,10 @@ function TweetModal({ modalState, user, updateModalState }) {
                                     <div className="tweet-compose-text-content-container">
                                         <textarea className="tweet-compose-textarea" placeholder="What's happening?">
                                         </textarea>
+
+                                        <div className="tweet-compose-mediaSection-container">
+                                            <MediaSelectionsContainers />
+                                        </div>
                     
                                         <div className="tweet-compose-public-settings-container">
                                             <div className="tweet-compose-public-settings-icons">
